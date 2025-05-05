@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e2e2e2;
+    color: #333;
+    line-height: 1.6;
+}
+
+#header {
+    background-color: #c9733a;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#text {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+#text a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+#text a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s;
+}
+
+#text a:hover::after {
+    width: 100%;
+}
+
+#text a:hover {
+    color: #ffffff;
+}
+
+#container2 {
+    flex: 1;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+#container2 h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c9733a;
+}
+
+#sobre {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.cards-container.equipe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    flex: 1 1 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
+    border: 2px solid #c9733a;
+    transition: transform 0.3s ease;
+}
+
+.card img.fotoMembro {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #c9733a;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .cards-container.equipe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+#footer {
+    background-color: #c9733a;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+}
