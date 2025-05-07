@@ -67,9 +67,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px 10px;
+  padding: 60px 20px;
   text-align: center;
+  border-radius: 20px;
+  margin: 30px auto 20px;
+  max-width: 900px;
 }
+
+#meio h1 {
+  font-size: 3em;
+  color: #2e7d32;
+  margin-bottom: -10px;
+}
+
+
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
